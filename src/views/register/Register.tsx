@@ -21,13 +21,35 @@ const HomeScreen = () => {
       />
       <View style={styles.logoContainer}>
         <Image
-          source={require("../../../assets/logo.png")}
+          source={require("../../../assets/user_image.png")}
           style={styles.logo}
         />
-        <Text style={styles.title}>F-Delivery</Text>
+        <Text style={styles.title}>Choose an image</Text>
       </View>
       <View style={styles.formContainer}>
-        <Text style={styles.formTitle}>LOGIN</Text>
+        <Text style={styles.formTitle}>REGISTER</Text>
+        <View style={styles.formTextInputContainer}>
+          <Image
+            source={require("../../../assets/user.png")}
+            style={styles.formIcon}
+          />
+          <TextInput
+            placeholder="First Name"
+            style={styles.formTextInput}
+            keyboardType="default"
+          />
+        </View>
+        <View style={styles.formTextInputContainer}>
+          <Image
+            source={require("../../../assets/my_user.png")}
+            style={styles.formIcon}
+          />
+          <TextInput
+            placeholder="Last Name"
+            style={styles.formTextInput}
+            keyboardType="default"
+          />
+        </View>
         <View style={styles.formTextInputContainer}>
           <Image
             source={require("../../../assets/email.png")}
@@ -41,6 +63,18 @@ const HomeScreen = () => {
         </View>
         <View style={styles.formTextInputContainer}>
           <Image
+            source={require("../../../assets/phone.png")}
+            style={styles.formIcon}
+          />
+          <TextInput
+            placeholder="Phone"
+            style={styles.formTextInput}
+            keyboardType="numeric"
+          />
+        </View>
+
+        <View style={styles.formTextInputContainer}>
+          <Image
             source={require("../../../assets/password.png")}
             style={styles.formIcon}
           />
@@ -51,17 +85,21 @@ const HomeScreen = () => {
             secureTextEntry
           />
         </View>
+        <View style={styles.formTextInputContainer}>
+          <Image
+            source={require("../../../assets/confirm_password.png")}
+            style={styles.formIcon}
+          />
+          <TextInput
+            placeholder="Confirm Password"
+            style={styles.formTextInput}
+            keyboardType="default"
+            secureTextEntry
+          />
+        </View>
 
         <View style={{ marginTop: 30 }}>
-          <RoundedButton text="LOGIN" onPress={() => {}} />
-        </View>
-        <View style={styles.formRegister}>
-          <Text>Don't have an account?</Text>
-          <TouchableOpacity
-            onPress={() => navigation.navigate("RegisterScreen")}
-          >
-            <Text style={styles.formRegisterButton}>Sign Up</Text>
-          </TouchableOpacity>
+          <RoundedButton text="SIGN IN" onPress={() => {}} />
         </View>
       </View>
     </View>
@@ -84,7 +122,7 @@ const styles = StyleSheet.create({
   formContainer: {
     backgroundColor: "#fff",
     width: "100%",
-    height: "40%",
+    height: "70%",
     position: "absolute",
     bottom: 0,
     borderTopStartRadius: 40,
@@ -110,11 +148,6 @@ const styles = StyleSheet.create({
     height: 25,
     marginTop: 5,
   },
-  formRegister: {
-    flexDirection: "row",
-    justifyContent: "center",
-    marginTop: 20,
-  },
   formRegisterButton: {
     fontWeight: "bold",
     color: "orange",
@@ -126,7 +159,7 @@ const styles = StyleSheet.create({
   logoContainer: {
     position: "absolute",
     alignSelf: "center",
-    top: "20%",
+    top: "5%",
     alignItems: "center",
   },
   logo: {
