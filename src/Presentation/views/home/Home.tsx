@@ -5,6 +5,7 @@ import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParamList } from "../../../../App";
 import useViewModel from "./ViewModel";
 import CustomTextInput from "../../components/CustomTextInput";
+
 const HomeScreen = () => {
   const { email, password, onChange } = useViewModel();
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();

@@ -1,5 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const HomeViewModel = () => {
   const [values, setValues] = useState({
