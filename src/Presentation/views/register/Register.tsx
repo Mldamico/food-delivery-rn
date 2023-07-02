@@ -1,27 +1,16 @@
-import {
-  Image,
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { Image, StyleSheet, Text, TextInput, View } from "react-native";
 import RoundedButton from "../../components/RoundedButton";
-import { useNavigation } from "@react-navigation/native";
-import { StackNavigationProp } from "@react-navigation/stack";
-import { RootStackParamList } from "../../../App";
 
-const HomeScreen = () => {
-  const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
+const RegisterScreen = () => {
   return (
     <View style={styles.container}>
       <Image
-        source={require("../../../assets/chef.jpg")}
+        source={require("../../../../assets/chef.jpg")}
         style={styles.background}
       />
       <View style={styles.logoContainer}>
         <Image
-          source={require("../../../assets/user_image.png")}
+          source={require("../../../../assets/user_image.png")}
           style={styles.logo}
         />
         <Text style={styles.title}>Choose an image</Text>
@@ -30,7 +19,7 @@ const HomeScreen = () => {
         <Text style={styles.formTitle}>REGISTER</Text>
         <View style={styles.formTextInputContainer}>
           <Image
-            source={require("../../../assets/user.png")}
+            source={require("../../../../assets/user.png")}
             style={styles.formIcon}
           />
           <TextInput
@@ -41,7 +30,7 @@ const HomeScreen = () => {
         </View>
         <View style={styles.formTextInputContainer}>
           <Image
-            source={require("../../../assets/my_user.png")}
+            source={require("../../../../assets/my_user.png")}
             style={styles.formIcon}
           />
           <TextInput
@@ -52,7 +41,7 @@ const HomeScreen = () => {
         </View>
         <View style={styles.formTextInputContainer}>
           <Image
-            source={require("../../../assets/email.png")}
+            source={require("../../../../assets/email.png")}
             style={styles.formIcon}
           />
           <TextInput
@@ -63,7 +52,7 @@ const HomeScreen = () => {
         </View>
         <View style={styles.formTextInputContainer}>
           <Image
-            source={require("../../../assets/phone.png")}
+            source={require("../../../../assets/phone.png")}
             style={styles.formIcon}
           />
           <TextInput
@@ -75,7 +64,7 @@ const HomeScreen = () => {
 
         <View style={styles.formTextInputContainer}>
           <Image
-            source={require("../../../assets/password.png")}
+            source={require("../../../../assets/password.png")}
             style={styles.formIcon}
           />
           <TextInput
@@ -87,7 +76,7 @@ const HomeScreen = () => {
         </View>
         <View style={styles.formTextInputContainer}>
           <Image
-            source={require("../../../assets/confirm_password.png")}
+            source={require("../../../../assets/confirm_password.png")}
             style={styles.formIcon}
           />
           <TextInput
@@ -106,7 +95,7 @@ const HomeScreen = () => {
   );
 };
 
-export default HomeScreen;
+export default RegisterScreen;
 
 const styles = StyleSheet.create({
   container: {
